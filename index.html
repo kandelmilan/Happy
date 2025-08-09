@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday 🎉 - Home</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #ff9a9e 0%,
+          #fad0c4 99%,
+          #fad0c4 100%
+        );
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5em;
+        text-shadow: 0 0 15px #ff407d, 0 0 30px #ff407d;
+      }
+
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+        color: #ffffffcc;
+        text-shadow: 0 0 5px #00000055;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      a.button {
+        background: #ff3c78;
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(255, 60, 120, 0.6);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      a.button:hover {
+        background: #ff1955;
+        box-shadow: 0 8px 25px rgba(255, 25, 85, 0.8);
+      }
+
+      footer {
+        position: absolute;
+        bottom: 15px;
+        font-size: 0.9rem;
+        color: #fff7;
+      }
+
+      /* Updated Photo Section Styling */
+      .photo-section {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(255, 64, 129, 0.3),
+          inset 0 0 40px rgba(255, 64, 129, 0.2);
+        background: white;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        cursor: pointer;
+        margin-bottom: 2.5rem;
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .photo-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+        transition: transform 0.35s ease;
+      }
+
+      .photo-section:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 40px rgba(255, 64, 129, 0.5),
+          inset 0 0 60px rgba(255, 64, 129, 0.3);
+      }
+
+      .photo-section:hover img {
+        transform: scale(1.07);
+        filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.3));
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+          max-width: 95vw;
+        }
+
+        a.button {
+          font-size: 1rem;
+          padding: 12px 25px;
+        }
+
+        .photo-section {
+          width: 200px;
+          height: 200px;
+          margin-bottom: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎉 Happy Birthday, Aayushma! 🎂</h1>
+    <div class="photo-section" aria-label="Photo of Aayushma">
+      <img src="./image/aayush.jpg" alt="Aayushma smiling" />
+    </div>
+
+    <p>Wishing you all the happiness and love on your special day! 💖</p>
+
+    <div class="btn-group">
+      <a
+        href="message.html"
+        class="button"
+        aria-label="Go to Aayushma's message"
+        >Click here Aayushma 💝</a
+      >
+    </div>
+
+    Made with ❤️ for Aayushma
+  </body>
+</html>

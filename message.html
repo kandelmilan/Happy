@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aayushma's Birthday Message</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      text-shadow: 0 0 8px #ff4081, 0 0 15px #ff79b0, 0 0 25px #ff4081;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff4081, 0 0 35px #ff79b0, 0 0 40px #ff4081;
+    }
+  }
+
+  /* Slow shimmer animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -500px 0;
+    }
+    100% {
+      background-position: 500px 0;
+    }
+  }
+
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f54ea2, #ff7676, #fbc7b0);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  @keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    animation: glowPulse 3s ease infinite alternate, fadeInUp 1s ease forwards;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+  }
+
+  /* Enhanced message box */
+  p.message {
+    opacity: 0; /* Hide initially to prevent flicker */
+    position: relative;
+    font-weight: 500;
+    font-size: 1.6rem;
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    background: rgba(255 255 255 / 0.15);
+    border-radius: 50px;
+    padding: 50px 60px;
+    box-shadow:
+      0 8px 32px 0 rgba(255, 64, 129, 0.4),
+      inset 0 0 60px rgba(255, 64, 129, 0.35);
+    color: #fff;
+    line-height: 1.85;
+    font-style: italic;
+    letter-spacing: 0.6px;
+    user-select: none;
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 64, 129, 0.8);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+
+  /* Shimmer effect overlay */
+  p.message::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 250%;
+    height: 200%;
+    background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.18) 50%,
+      rgba(255, 255, 255, 0) 100%);
+    transform: rotate(25deg);
+    animation: shimmer 4s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Quotes styling */
+  p.message::after {
+    content: '"';
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    color: #ff6fa1cc;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    user-select: none;
+    z-index: 2;
+  }
+
+  /* Put text above shimmer */
+  p.message > * {
+    position: relative;
+    z-index: 3;
+  }
+
+  a.button {
+    background: #fff;
+    color: #ff4081;
+    padding: 18px 55px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 60px;
+    text-decoration: none;
+    box-shadow: 0 8px 28px rgba(255, 64, 129, 0.8);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+    display: inline-block;
+  }
+
+  a.button:hover {
+    background: #ff4081;
+    color: #fff;
+    box-shadow: 0 12px 40px rgba(255, 64, 129, 1);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 15px;
+    font-size: 1rem;
+    color: #ffffffcc;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+  }
+
+  /* Responsive Styling */
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    p.message {
+      font-size: 1.3rem;
+      padding: 40px 40px;
+      max-width: 90vw;
+      border-radius: 40px;
+      line-height: 1.6;
+    }
+
+    p.message::after {
+      font-size: 4rem;
+      top: 10px;
+      left: 20px;
+    }
+
+    a.button {
+      padding: 14px 40px;
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+    }
+
+    p.message {
+      font-size: 1.1rem;
+      padding: 25px 25px;
+      border-radius: 30px;
+      line-height: 1.5;
+    }
+
+    p.message::after {
+      font-size: 3rem;
+      top: 5px;
+      left: 15px;
+    }
+
+    a.button {
+      padding: 12px 30px;
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Happy Birthday, Aayushma! 🎉💖</h1>
+  <p class="message">
+    <span>
+      <br>
+      On this special day, I just want to remind you how truly amazing you are.<br><br>
+      Your smile lights up every room, your kindness warms every heart, and your love makes every moment unforgettable.<br><br>
+      May this year bring you endless joy, countless beautiful memories, and all the love your heart can hold.<br><br>
+      Thank you for being my sunshine, my partner, and my best friend.<br><br>
+      Here's to celebrating you today and always. Happy Birthday, my love! 🎂❤️✨
+    </span>
+  </p>
+
+  <a href="index.html" class="button" aria-label="Go back to home page">Back to Home</a>
+
+</body>
+</html>
